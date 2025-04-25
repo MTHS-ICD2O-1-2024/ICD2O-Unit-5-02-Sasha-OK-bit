@@ -4,20 +4,19 @@
 // Created on: April 2025
 // This file contains the JS functions for index.html
 
-const randomNumber = Math.floor(Math.random() * 6) + 1
 
 function calculaterandomnumber () {
 
-  const userNumber = parseInt(document.getElementById('usernumber').value)
+  const randomNumber = Math.floor(Math.random() * 6) + 1
+  const userNumber= document.getElementById('option-positive').checked
 
-  if (userNumber === randomNumber)  {
+  if (userNumber==true)  {
     document.getElementById('answer1').innerHTML =
-      '<p>You have got it correct with your guess!</p>'
+      "<p>You have got it correct with your guess!" + randomNumber + "</p>" 
+  }
+  else {
+    document.getElementById('answer1').innerHTML =
+      "<p>You have got it correct with your guess!: -" + randomNumber + "</p>" 
   }
 
-  if (userNumber !== randomNumber)  {
-    document.getElementById('answer1').innerHTML =
-      '<p>You have done wrong with your guess!</p>'
-      '<br/> The correct number was: ' + randomNumber + '</p>'
   }
-}
