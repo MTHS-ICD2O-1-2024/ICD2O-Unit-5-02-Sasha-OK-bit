@@ -7,10 +7,10 @@
 
 function calculaterandomnumber () {
 
-  const randomNumber = Math.floor(Math.random() * 6) + 1
-  const userNumber= document.getElementById('option-positive').checked
+  const ageNumber= Math.floor(Math.random() * 6) + 1
+  const day= document.getElementById('option-positive').checked
 
-  if (userNumber==true)  {
+  if (ageNumber== )  {
     document.getElementById('answer1').innerHTML =
       "<p>You have got it correct with your guess!" + randomNumber + "</p>" 
   }
